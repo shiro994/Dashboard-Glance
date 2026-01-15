@@ -1,0 +1,29 @@
+services:
+  glance:
+    image: glanceapp/glance:latest
+    container_name: glance
+    restart: unless-stopped
+    volumes:
+      - /docker/glance/config:/app/config
+      - /docker/glance/icons:/glance/assets/icons
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - 8083:8080
+    env_file:
+      - .env
+      - urls.env
+    environment:
+      - TZ=Europe/Paris
+
+  f1_api:
+    image: skyallinott/f1_api:latest
+    container_name: f1_api
+    restart: unless-stopped
+    ports:
+      - 4463:4463
+    environment:
+      - TIMEZONE=Europe/Paris
+      - TRACK_COLOUR=#e5d486
+      - EVENT_DETAIL=main
+
+networks: {}

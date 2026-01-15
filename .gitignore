@@ -1,0 +1,23 @@
+# Secrets - NEVER COMMIT
+.env
+
+# Spotify token
+spotify_token.txt
+
+# Backups
+*.bak
+*.backup
+*.old
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
